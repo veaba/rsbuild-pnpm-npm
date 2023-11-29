@@ -8,7 +8,7 @@ export default defineConfig({
       '@': './src',
     },
     entry: {
-      /** TODO 这里期望 /dynamic 就可以访问，但实际 /不可访问 */
+      /** 这里期望 /dynamic 就可以访问，但实际 /不可访问 */
       dynamic: './src/index.jsx',
     },
   },
@@ -24,15 +24,8 @@ export default defineConfig({
       console.log('dev start ==> ');
     },
   },
-  htmlPlugin: false,
   tools: {
     bundlerChain: (_, { HtmlPlugin, CHAIN_ID }) => {},
   },
   plugins: [pluginReact(), pluginNodePolyfill()],
 });
-
-/**
- * 可访问：		http://localhost:8080/dynamic
- * 不可访问：	http://localhost:8080/
- *
- */
