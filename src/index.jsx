@@ -7,7 +7,8 @@ const Span = styled.span`
   color: red;
 `;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('aa')); // 代理的 id
+// const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App>
