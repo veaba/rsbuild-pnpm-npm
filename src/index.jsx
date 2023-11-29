@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import App from './App';
 
 const Span = styled.span`
-  border: 1px solid red;
+  color: red;
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
