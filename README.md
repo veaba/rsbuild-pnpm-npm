@@ -53,3 +53,7 @@ Preview the production build locally:
 ```bash
 npm preview
 ```
+
+## `single-vendor` error
+
+![single-vendor](/images//single-vendor.png)

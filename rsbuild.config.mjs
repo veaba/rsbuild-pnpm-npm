@@ -32,7 +32,7 @@ export default defineConfig({
          *
          * TODO：
          * 问题1：为什么 http://localhost:8080/static/js/dynamic.js 不存在
-				 * 问题2：两个 proxy 的优先级处理
+         * 问题2：两个 proxy 的优先级处理
          */
         context: (pathname) => {
           console.log('js 匹配 pathname=>', pathname);
@@ -91,4 +91,9 @@ export default defineConfig({
     bundlerChain: (_, { HtmlPlugin, CHAIN_ID }) => {},
   },
   plugins: [pluginReact(), pluginNodePolyfill()],
+  performance: {
+    chunkSplit: {
+      strategy: 'single-vendor',
+    },
+  },
 });
